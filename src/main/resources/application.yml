@@ -1,0 +1,26 @@
+spring:
+  security:
+    filter:
+      dispatcher-types: async, error, request, forward
+    saml2:
+      relyingparty:
+        registration:
+          one:
+            signing:
+              credentials:
+                - private-key-location: classpath:credentials/my-private.key
+                  certificate-location: classpath:credentials/my-certificate.crt
+            assertingparty:
+              metadata-uri: https://dev-35256082.okta.com/app/exkafwax8g5eZswME5d7/sso/saml/metadata
+            singlelogout:
+              binding: POST
+              url: "{baseUrl}/saml/logout"
+              responseUrl: "{baseUrl}/saml/SingleLogout"
+            acs:
+              location: "{baseUrl}/saml/SSO"
+
+myapp:
+  keystore:
+    password:'EMW@2023'
+    alias:mykeyalias
+    alias-password:'EMW@2023'
