@@ -1,4 +1,4 @@
-# demo_spring_sso
+# custom_url With Maven
 = SAML 2.0 Login & Logout Sample using SAML Extension URLs
 
 This guide provides instructions on setting up the new Spring Security SAML 2.0 support using the endpoint URLs from the EOLd Spring Security SAML Extension.
